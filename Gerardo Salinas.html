@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réplica de la página de Namecheap</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .left-buttons {
+            display: flex;
+            align-items: center;
+        }
+        .left-buttons a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+            text-transform: uppercase;
+            position: relative;
+        }
+        .right-buttons {
+            display: flex;
+            align-items: center;
+        }
+        .right-buttons button {
+            background: none;
+            border: none;
+            color: white;
+            margin-left: 20px;
+            cursor: pointer;
+            padding: 0; /* Remove el relleno predeterminado de los botones */
+            font-size: 16px; /* Aumentar el tamaño de fuente */
+        }
+        .cart img {
+            width: 20px;
+        }
+        .search img {
+            width: 20px;
+        }
+        .form-container {
+            display: none;
+            background-color: #f2f2f2;
+            padding: 20px;
+            border-radius: 5px;
+            position: absolute;
+            top: calc(100% + 10px);
+            left: 0;
+            z-index: 1;
+            width: 200px;
+        }
+        .left-buttons a:hover + .form-container {
+            display: block;
+        }
+        .form-container button {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .form-container button:last-child {
+            margin-bottom: 0;
+        }
+        .form-container form {
+            display: none;
+        }
+        .form-container:hover form {
+            display: block;
+        }
+        .image-container {
+            text-align: left; /* Alinea el texto a la izquierda */
+            margin-top: 20px;
+        }
+        .image-container img {
+            max-width: 150px;
+        }
+        .horizontal-buttons {
+            display: flex;
+            flex-wrap: wrap; /* Permite que los botones se envuelvan si no hay suficiente espacio */
+            margin-top: 20px; /* Espacio entre el logo y los botones */
+        }
+        .horizontal-buttons button {
+            background: none;
+            border: none;
+            color: rgb(108, 120, 125); /* Cambiar el color del texto a RGB 108 120 125 */
+            margin-right: 20px;
+            margin-bottom: 10px; /* Espacio entre los botones */
+            cursor: pointer;
+            font-size: 18px; /* Tamaño de fuente más grande */
+        }
+        .bottom-buttons {
+            display: flex;
+            flex-direction: column; /* Coloca los botones uno encima del otro */
+            margin-top: 10px; /* Espacio entre los botones */
+            margin-left: 20px; /* Espacio adicional a la izquierda para alinear con los botones superiores */
+        }
+        .bottom-buttons button {
+            background: none;
+            border: none;
+            color: rgb(108, 120, 125); /* Cambiar el color del texto a RGB 108 120 125 */
+            font-size: 18px; /* Tamaño de fuente más grande */
+            margin-bottom: 10px; /* Espacio entre los botones */
+            cursor: pointer;
+        }
+        .sale-bar {
+            background-color: rgb(232, 120, 81); /* Color de la barra */
+            padding: 10px 0; /* Espaciado interno */
+            text-align: center; /* Alineación del texto */
+            width: 100%; /* Ancho de la barra reducido */
+        }
+        .sale-bar p {
+            color: white; /* Color del texto */
+            margin: 0; /* Eliminar margen por defecto */
+        }
+        .sale-bar a {
+            color: white; /* Color del texto */
+            text-decoration: underline; /* Subrayado del texto */
+            cursor: pointer; /* Cambio de cursor al pasar el mouse */
+            text-transform: capitalize; /* Convertir la primera letra a mayúscula */
+        }
+        /* Estilo para la última imagen */
+        .last-image-container {
+            text-align: center; /* Alinea el contenido al centro */
+            margin-top: 50px; /* Espacio superior */
+        }
+        .last-image-container img {
+            max-width: 150px; /* Ancho máximo de la imagen */
+        }
+        /* Cambiar el tamaño del texto "Alojamiento de WordPress" a 32 y ponerlo en negrita */
+        .last-image-container p:nth-of-type(1) {
+            font-size: 32px;
+            font-weight: bold;
+        }
+    </style>
+
+
+    <div class="navbar">
+        <div class="left-buttons">
+            <a href="#">Contáctenos</a>
+            <div class="form-container">
+                <button>Enviar Ticket</button>
+                <button>Chat en Vivo</button>
+                <button>Reportar Abuso</button>
+            </div>
+            <a href="#">Iniciar Sesión</a>
+            <div class="form-container">
+                <a href="#">Nombre de Usuario</a>
+                <a href="#">Contraseña</a>
+                <a href="#">Iniciar Sesión</a>
+                <a href="#">¿Olvidaste la Contraseña?</a>
+            </div>
+            <a href="#">Inscríbete</a>
+        </div>
+        <div class="right-buttons">
+            <button class="cart"><img src="png-clipart-shopping-cart-shopping-cart-removebg-preview.png" alt="Carrito de Compras"></button>
+            <button class="currency-button">USD</button> <!-- Botón para elegir la moneda -->
+            <button class="search"><img src="Lupa.jpg" alt="Buscar"></button>
+        </div>
+    </div>
+
+    <div class="image-container">
+        <img src="NameCheap-Logo.jpg" alt="NameCheap Logo">
+    </div>
+
+    <div class="horizontal-buttons">
+        <button>Dominios</button>
+        <button>Alojamiento</button>
+        <button>Wordpress</button>
+        <button>Correo electrónico</button>
+        <button>Herramientas de marketing</button>
+        <button>Seguridad</button>
+        <button>Transferir a nosotros</button>
+    </div>
+
+    <div class="horizontal-buttons">
+        <button>Centro de Ayuda</button>
+        <button>Cuenta</button>
+    </div>
+
+    <div class="sale-bar">
+        <p><a href="#" class="sale-button">VENTA FLASH: Cree y aloje el sitio web de WordPress de sus sueños por tan solo $0.98/mes</a></p>
+    </div>
+
+    <div class="last-image-container">
+        <img src="WhatsApp Image 2024-04-05 at 20.34.20.jpeg" alt="Tu Imagen">
+        <p>Alojamiento de WordPress</p>
+        <p>EasyWP es la solución de alojamiento administrado de WordPress</p>
+        <p>rápida y asequible para todos.</p>
+    </div>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Web con Dos Columnas</title>
+    <style>
+        /* Agrega tu CSS personalizado aquí */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white; /* Cambiar el color de fondo a blanco */
+        }
+        .container {
+            display: flex;
+            justify-content: center; /* Centra las columnas horizontalmente */
+            padding: 20px;
+        }
+        .column {
+            width: 45%; /* Ajustar el ancho de las columnas */
+            background-color: white;
+            padding: 20px;
+            margin: 0 10px; /* Agrega un margen entre las columnas */
+            text-align: left; /* Alinea el texto a la izquierda dentro de la columna */
+            border: none; /* Quita los bordes de las columnas */
+        }
+        .column img {
+            width: 370px; /* Establece el ancho deseado */
+            height: 260px; /* Establece el alto deseado */
+            display: block;
+            margin-bottom: 15px; /* Agrega un espacio inferior */
+        }
+        .column > div {
+            text-align: left; /* Alinea el texto a la izquierda */
+        }
+        h2 {
+            font-weight: bold;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.6; /* Aumentar el espacio entre líneas */
+            margin-bottom: 10px; /* Aumentar el espacio entre párrafos */
+        }
+    </style>
+
+
+<div class="container">
+    <div class="column">
+        <img src="WhatsApp Image 2024-04-07 at 16.38.19.jpeg" alt="Imagen 1">
+        <div>
+            <h1>Temas</h1>
+            <p>Personaliza tu sitio web con cualquier tema de WordPress que desees.</p>
+        </div>
+    </div>
+    <div class="column">
+        <img src="WhatsApp Image 2024-04-05 at 20.34.50.jpeg" alt="Imagen 2">
+        <div>
+            <h1>complementos</h1>
+            <p>Amplía la funcionalidad de tu sitio web con potentes complementos.</p>
+        </div>
+    </div>
+</div>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Página Web con Cuatro Columnas</title>
+<style>
+    /* Agrega tu CSS personalizado aquí */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: white; /* Cambiar el color de fondo a blanco */
+    }
+    .container {
+        display: flex;
+        flex-wrap: wrap; /* Permite que las columnas se envuelvan en múltiples líneas */
+        justify-content: center; /* Centra las columnas horizontalmente */
+        padding: 20px;
+    }
+    .column {
+        width: 45%; /* Ajustar el ancho de las columnas */
+        background-color: white;
+        padding: 20px;
+        margin: 0 10px 20px; /* Agrega un margen entre las columnas y abajo */
+        text-align: left; /* Alinea el texto a la izquierda dentro de la columna */
+        border: none; /* Quita los bordes de las columnas */
+        display: flex; /* Utiliza flexbox para organizar el contenido */
+        align-items: center; /* Centra verticalmente el contenido */
+    }
+    .column img {
+        max-width: 100%; /* Ajustar el ancho máximo de la imagen */
+        height: auto;
+        margin-right: 15px; /* Agrega un espacio a la derecha de la imagen */
+    }
+    h2 {
+        font-weight: bold;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    p {
+        font-size: 16px;
+        line-height: 1.6; /* Aumentar el espacio entre líneas */
+        margin-bottom: 10px; /* Aumentar el espacio entre párrafos */
+    }
+    .centered-row {
+        display: flex;
+        justify-content: center; /* Centra las columnas horizontalmente */
+        width: 100%;
+    }
+</style>
+
+
+<div class="container">
+<div class="column">
+    <img src="Img_a.jpeg" style="width: 100px; height: 100px" alt="Imagen 1">
+    <div>
+        <h2>Copias de seguridad simples</h2>
+        <p>Un clic para realizar una copia de seguridad. Un clic para restaurar. Todo desde una interfaz sencilla.</p>
+    </div>
+</div>
+<div class="column">
+    <img src="Img_b.jpeg"style="width: 100px; height: 100px"  alt="Imagen 2">
+    <div>
+        <h2>Modo de mantenimiento</h2>
+        <p>¿Su sitio web no está listo para funcionar? No te preocupes. Selecciona el modo de mantenimiento, lo que te permite decidir cuándo quieres hacer tu gran revelación.</p>
+    </div>
+</div>
+<div class="column">
+    <img src="Img_c.jpeg" style="width: 100px; height: 100px"alt="Imagen 3">
+    <div>
+        <h2>PositivoSSL gratuito</h2>
+        <p>Lleve cifrado, validación y confiabilidad a su sitio web EasyWP con PositiveSSL de Sectigo. Incluido gratis con todos los planes EasyWP. 4.</p>
+    </div>
+</div>
+<div class="column">
+    <img src="Img_d.jpeg" style="width: 100px; height: 100px"alt="Imagen 4">
+    <div>
+        <h2>Un tablero</h2>
+        <p>Cree y administre sus sitios web de WordPress desde un único panel, con un único inicio de sesión.</p>
+    </div>
+</div>
+</div>
+
+<div class="centered-row">
+
+
+<div class="column">
+    <img src="Img_e.jpeg"style="width: 100px; height: 100px" alt="Imagen 6">
+    <div>
+        <h2>CDN gratis</h2>
+        <p>Obtenga acceso gratuito a la red de entrega de contenido de Namecheap, una herramienta que almacena en caché y entrega el contenido de su sitio web.</p>
+    </div>
+</div>
+</div>
+<div class="last-image-container">
+    <img src="8bba2ace-aaea-4f59-8807-0ef809c3abf0.jpg" alt="Tu Imagen">
+    <p>Gerardo Salinas</p>
+    <p>20231031042</p>
+</div>
+
+</body>
+</html>
+
